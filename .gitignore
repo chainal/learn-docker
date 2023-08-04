@@ -1,1 +1,5 @@
 /.idea/
+.DS_Store
+/app-java/.idea/
+/app-java/.gradle/
+/app-java/build/
