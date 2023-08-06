@@ -8,9 +8,23 @@ services:
       - app-net
     volumes:
       - gradle-cache:/root/.gradle
+  app-mysql:
+    image: mysql:8.1.0
+    container_name: app-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+    ports:
+      - 3306:3306
+    networks:
+      - app-net
+    volumes:
+      - mysql-data:/var/lib/mysql
 networks:
   app-net:
     driver: bridge
 volumes:
   gradle-cache:
+    driver: local
+  mysql-data:
     driver: local
