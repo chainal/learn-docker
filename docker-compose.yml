@@ -2,6 +2,8 @@ services:
   app-java:
     build: ./app-java
     container_name: app-java
+    environment:
+      - MYSQL_HOST=app-mysql
     ports:
       - 8080:8080
     networks:
