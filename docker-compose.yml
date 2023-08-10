@@ -8,6 +8,13 @@ services:
       - 8080:8080
     networks:
       - app-net
+  app-ui:
+    build: ./app-ui
+    container_name: app-ui
+    ports:
+      - 80:80
+    networks:
+      - app-net
   app-mysql:
     image: mysql:8.1.0
     container_name: app-mysql

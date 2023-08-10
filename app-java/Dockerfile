@@ -1,7 +1,8 @@
 FROM gradle:8.2.1-jdk17
 WORKDIR /root
-COPY src ./src
 COPY build.gradle settings.gradle ./
+RUN gradle dependencies
+COPY src ./src
 RUN gradle bootJar
 
 FROM eclipse-temurin:17-jdk-focal
