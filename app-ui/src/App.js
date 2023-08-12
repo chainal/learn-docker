@@ -4,11 +4,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import ProTip from './ProTip';
-import Button from '@mui/material/Button';
-import Alert from '@mui/material/Alert';
-import Stack from '@mui/material/Stack';
-import TextField from '@mui/material/TextField';
-import Grid from '@mui/material/Grid';
+import BasicTabs from './BasicTabs'
 
 function Copyright() {
   return (
@@ -28,15 +24,9 @@ export default function App() {
     <Container maxWidth="lg">
       <Box sx={{ my: 4 }}>
         <Typography variant="h4" component="h1" gutterBottom>
-          Docker站点
+          天下城
         </Typography>
-        <Stack spacing={2}>
-          <Box>
-            <TextField id="outlined-basic" label="Outlined" variant="outlined"
-                       InputProps={{endAdornment: <Button variant="text">Text</Button>}} />
-          </Box>
-          <Alert severity="info">This is an info alert — check it out!</Alert>
-        </Stack>
+        <BasicTabs />
         <ProTip />
         <Copyright />
       </Box>
