@@ -2,13 +2,13 @@ name: main-github-actions
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
-  check-bats-version:
+  docker-compose-build-run:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '14'
-      - run: npm install -g bats
-      - run: bats -v
-      
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Build And Run
+        run: docker-compose -f "docker-compose.yml" up -d --build
+      - name: Stop containers
+        if: always()
+        run: docker-compose -f "docker-compose.yml" down
