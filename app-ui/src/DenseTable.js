@@ -29,11 +29,11 @@ export default function DenseTable() {
       <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
         <TableHead>
           <TableRow>
+            <TableCell>单词</TableCell>
             <TableCell>假名</TableCell>
-            <TableCell>Calories</TableCell>
-            <TableCell>Fat&nbsp;(g)</TableCell>
-            <TableCell>Carbs&nbsp;(g)</TableCell>
-            <TableCell>Protein&nbsp;(g)</TableCell>
+            <TableCell>词类</TableCell>
+            <TableCell>含义</TableCell>
+            <TableCell>课号</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
