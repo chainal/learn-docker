@@ -1,5 +1,5 @@
 name: main-github-actions
-run-name: ${{ github.actor }} is learning GitHub Actions
+run-name: ${{ github.actor }} is build image and test running system.
 on:
   push:
     branches:
