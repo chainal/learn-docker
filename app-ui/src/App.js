@@ -11,8 +11,8 @@ function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
+      <Link color="inherit" >
+        chainal
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -21,8 +21,13 @@ function Copyright() {
 }
 
 export default function App() {
+  document.title='-- LEARNING --'
   return (
-    <ClippedDrawer />
+    <Typography>
+      <ClippedDrawer />
+      <Copyright />
+    </Typography>
+    
     // <Container maxWidth="lg">
      
     //   <Box sx={{ my: 4 }}>

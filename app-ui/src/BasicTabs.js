@@ -2,9 +2,10 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import DenseTable from './DenseTable'
+import Fab from '@mui/material/Fab';
+import AddIcon from '@mui/icons-material/Add';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -57,6 +58,9 @@ export default function BasicTabs() {
       </Box>
       <TabPanel value={value} index={0}>
         <DenseTable />
+        <Fab sx={{position: 'absolute', bottom: 16, right: 16}} color="primary" aria-label="add">
+          <AddIcon />
+        </Fab>
       </TabPanel>
       <TabPanel value={value} index={1}>
         Item Two
