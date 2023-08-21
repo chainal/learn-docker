@@ -8,17 +8,17 @@ services:
       - 8080:8080
     networks:
       - app-net
-  #app-ui:
-   # build: ./app-ui
-    #container_name: app-ui
-    #environment:
-    #  - API_HOST=app-java
-    #ports:
-    #  - 80:80
-    #networks:
-    #  - app-net
+  app-ui:
+    build: ./app-ui
+    container_name: app-ui
+    environment:
+      - API_HOST=app-java
+    ports:
+      - 80:80
+    networks:
+      - app-net
   app-mysql:
-    image: mysql:8.1.0
+    build: ./app-mysql
     container_name: app-mysql
     environment:
       MYSQL_ROOT_PASSWORD: example
