@@ -1,22 +1,22 @@
 services:
-#  app-java:
-#    build: ./app-java
-#    container_name: app-java
-#    environment:
-#      - MYSQL_HOST=app-mysql
-#    ports:
-#      - 8080:8080
-#    networks:
-#      - app-net
-#  app-ui:
-#    build: ./app-ui
-#    container_name: app-ui
-#    environment:
-#      - API_HOST=app-java
-#    ports:
-#      - 80:80
-#    networks:
-#      - app-net
+  app-java:
+    build: ./app-java
+    container_name: app-java
+    environment:
+      - MYSQL_HOST=app-mysql
+    ports:
+      - 8080:8080
+    networks:
+      - app-net
+  # app-ui:
+  #   build: ./app-ui
+  #   container_name: app-ui
+  #   environment:
+  #     - API_HOST=app-java
+  #   ports:
+  #     - 80:80
+  #   networks:
+  #     - app-net
   app-mysql:
     build: ./app-mysql
     container_name: app-mysql
