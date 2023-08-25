@@ -42,11 +42,11 @@ export default function DenseTable() {
               key={row.id}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
+              <TableCell>{row.word}</TableCell>
               <TableCell>{row.kana}</TableCell>
-              <TableCell ></TableCell>
-              <TableCell ></TableCell>
-              <TableCell ></TableCell>
-              <TableCell ></TableCell>
+              <TableCell></TableCell>
+              <TableCell></TableCell>
+              <TableCell></TableCell>
             </TableRow>
           ))}
         </TableBody>

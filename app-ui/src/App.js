@@ -6,6 +6,7 @@ import Link from '@mui/material/Link';
 import ProTip from './ProTip';
 import BasicTabs from './BasicTabs'
 import ClippedDrawer from './ClippedDrawer';
+import PersistentDrawerLeft from './PersistentDrawerLeft';
 
 function Copyright() {
   return (
@@ -24,7 +25,7 @@ export default function App() {
   document.title='-- LEARNING --'
   return (
     <Typography>
-      <ClippedDrawer />
+      <PersistentDrawerLeft />
       <Copyright />
     </Typography>
     

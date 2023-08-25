@@ -14,6 +14,7 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import BasicTabs from './BasicTabs';
+import IconButton from '@mui/material/IconButton';
 
 const drawerWidth = 240;
 
@@ -58,15 +59,16 @@ export default function ClippedDrawer() {
     changeIndex(newIndex);
   };
 
-
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
-        <Toolbar>
-          <Typography variant="h6" noWrap component="div">
-            十三番機
-          </Typography>
+      <AppBar position="fixed" 
+              sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }} 
+              >
+          <Toolbar>
+            <Typography variant="h6" noWrap component="div">
+              十三番機
+            </Typography>
         </Toolbar>
       </AppBar>
       <Drawer
