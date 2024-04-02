@@ -6,4 +6,4 @@
 
 docker-compose build
 
-docker-compost up
+docker-compose up
